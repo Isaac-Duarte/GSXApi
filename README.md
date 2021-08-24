@@ -1,5 +1,5 @@
 # GSX REST Api Client
-This is a libary to interface with the GSX Api.
+This is a library to interface with the GSX Api.
 
 Currently, there are no valid requests however once I gain access to the GSX API I made it super easy to add api calls.
 
