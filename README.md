@@ -4,7 +4,7 @@ This is a library to interface with the GSX Api.
 Currently, there are no valid requests however once I gain access to the GSX API I made it super easy to add api calls.
 
 ## Example Calls
-For more information look at the **[interface](/GSXApi/GSXApi/Interfaces/IApiCall.cs)** and the **[ExampleCall](/GSXApi/GSXApi/ApiCalls/ExampleCall.cs)**.
+For more information look at the **[interface](/GSXApi/Interfaces/IApiCall.cs)** and the **[ExampleCall](/GSXApi/ApiCalls/ExampleCall.cs)**.
 
 ## Samples
 
