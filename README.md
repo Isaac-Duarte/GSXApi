@@ -46,3 +46,6 @@ Console.WriteLine(result.Secret);
 
 ## Credits
 [Rest Sharp](https://restsharp.dev/) - Made my life easier
+
+#### Example Client
+[Cosmos](https://github.com/Isaac-Duarte/Cosmos)
