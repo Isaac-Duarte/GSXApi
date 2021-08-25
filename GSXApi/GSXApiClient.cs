@@ -47,7 +47,7 @@ namespace GSXApi
             if (response.IsSuccessful)
                 return response.Data;
             else
-                throw new GSXException($"Unable to send request to {response.ResponseUri}", response.ErrorException);
+                throw new GSXException($"Unable to send request. {response.ErrorMessage}", response.ErrorException);
         }
     }
 }

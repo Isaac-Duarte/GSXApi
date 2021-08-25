@@ -22,6 +22,9 @@ namespace GSXApi.Services
 
             // Adds the approiate acecpt language header to the rest client
             addAcceptLanguageHeader();
+
+            // Set the user agent
+            _client.UserAgent = "Cosmos";
         }
 
         /// <summary>
@@ -35,10 +38,12 @@ namespace GSXApi.Services
                     _gsxConfiguration.AuthConfiguration.PartnerCertPath);
             
             // Generate certificate class
-            X509Certificate certificate = new X509Certificate(_gsxConfiguration.AuthConfiguration.PartnerCertPath,
-                _gsxConfiguration.AuthConfiguration.CertPassword);
+            X509Certificate2 certificate = new X509Certificate2(_gsxConfiguration.AuthConfiguration.PartnerCertPath,
+                _gsxConfiguration.AuthConfiguration.CertPassword,
+                X509KeyStorageFlags.MachineKeySet);
 
             // Add that certificate to the file.
+            _client.ClientCertificates = new X509CertificateCollection();
             _client.ClientCertificates.Add(certificate);
         }
 
@@ -75,7 +80,7 @@ namespace GSXApi.Services
 
             // Add proper json body
             if (call.HttpMethod == Method.POST)
-                request.AddJsonBody(call.HttpMethod);
+                request.AddJsonBody(call.Payload);
             
             var response = await _client.ExecuteAsync<T>(request);
 

@@ -27,7 +27,7 @@ namespace GSXApi.ApiCalls
         {
             get
             {
-                return "/exmaple";
+                return "example";
             }
         }
 
@@ -56,9 +56,16 @@ namespace GSXApi.ApiCalls
         }
 
         /// <summary>
-        /// Add the payload directrly into the payload
+        /// Empty Ctor
         /// </summary>
         /// <param name="examplePayload"></param>
+        public ExampleCall()
+        {
+        }
+
+        /// <summary>
+        /// Initalize the variables
+        /// </summary>
         public ExampleCall(ExamplePayload examplePayload=null, Dictionary<string, string> parameters=null)
         {
             _examplePayload = examplePayload;
